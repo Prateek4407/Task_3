@@ -1,3 +1,6 @@
+
+
+
 const express = require('express');
 const students = require('./DATA.json');
 const app = express();
@@ -19,14 +22,35 @@ app.get('/api/students', (req, res) => {
 
 app.get('/api/students/:id', (req, res) => {
   const id = Number(req.params.id);
-  const student = students.find((student) => student.id === id );
+
+  if (isNaN(id)) {
+    return res.status(400).json({ status: "error", message: "Invalid student ID" });
+  }
+
+  const student = students.find((student) => student.id === id);
+
+  if (!student) {
+    return res.status(404).json({ status: "error", message: "Student not found" });
+  }
+
   return res.json(student);
-  
 });
 
 app.post("/api/students", (req, res) => {
-  const body = req.body;
-  students.push({ ...body, id: students.length + 1 });
+  const { name, age, course } = req.body;
+
+  if (!name || !age || !course) {
+    return res.status(400).json({
+      status: "error",
+      message: "name, age, and course are all required"
+    });
+  }
+
+  const newId = students.length > 0
+    ? Math.max(...students.map(s => s.id)) + 1
+    : 1;
+
+  students.push({ name, age, course, id: newId });
   fs.writeFile("./DATA.json", JSON.stringify(students, null, 2), (err) => {
     if (err) {
       console.error(err);
@@ -64,8 +88,16 @@ app.put("/api/students/:id", (req, res) => {
     return res.status(404).json({ status: "error", message: "Student not found" });
   }
 
-  
-  students[index] = { id, ...updatedStudent };
+  const { name, age, course } = updatedStudent;
+
+  if (!name || !age || !course) {
+    return res.status(400).json({
+      status: "error",
+      message: "name, age, and course are all required"
+    });
+  }
+
+  students[index] = { id, name, age, course };
 
   fs.writeFile("./DATA.json", JSON.stringify(students, null, 2), err => {
     if (err) {
@@ -84,4 +116,3 @@ app.put("/api/students/:id", (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on PORT:${port}`);
 });
-
