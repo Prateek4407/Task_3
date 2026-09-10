@@ -1,0 +1,104 @@
+[
+  {
+    "id": 1,
+    "first_name": "Astra",
+    "age": 1,
+    "course": "Mechanical Engineering"
+  },
+  {
+    "id": 2,
+    "first_name": "Emmalee",
+    "age": 2,
+    "course": "Electrical Engineering"
+  },
+  {
+    "id": 3,
+    "first_name": "Leonhard",
+    "age": 3,
+    "course": "Mechanical Engineering"
+  },
+  {
+    "id": 4,
+    "first_name": "Bianka",
+    "age": 4,
+    "course": "Mechanical Engineering"
+  },
+  {
+    "id": 5,
+    "first_name": "Carroll",
+    "age": 5,
+    "course": "Mechanical Engineering"
+  },
+  {
+    "id": 6,
+    "first_name": "Jeramie",
+    "age": 6,
+    "course": "Industrial Engineering"
+  },
+  {
+    "id": 7,
+    "first_name": "Ware",
+    "age": 7,
+    "course": "Electrical Engineering"
+  },
+  {
+    "id": 8,
+    "first_name": "Silvain",
+    "age": 8,
+    "course": "Biomedical Engineering"
+  },
+  {
+    "id": 9,
+    "first_name": "Nikola",
+    "age": 9,
+    "course": "Industrial Engineering"
+  },
+  {
+    "id": 10,
+    "first_name": "Peri",
+    "age": 10,
+    "course": "Petroleum Engineering"
+  },
+  {
+    "id": 11,
+    "first_name": "Darya",
+    "age": 11,
+    "course": "Aerospace Engineering"
+  },
+  {
+    "id": 12,
+    "first_name": "Keven",
+    "age": 12,
+    "course": "Computer Science"
+  },
+  {
+    "id": 13,
+    "first_name": "Alley",
+    "age": 13,
+    "course": "Electrical Engineering"
+  },
+  {
+    "id": 14,
+    "first_name": "Gertrudis",
+    "age": 14,
+    "course": "Mechanical Engineering"
+  },
+  {
+    "id": 15,
+    "first_name": "Kerri",
+    "age": 15,
+    "course": "Industrial Engineering"
+  },
+  {
+    "id": 18,
+    "first_name": "Vishal",
+    "age": "22",
+    "course": "Civil Engineering"
+  },
+  {
+    "id": 19,
+    "first_name": "Yatharth",
+    "age": "22",
+    "course": "Computer Science"
+  }
+]
